@@ -11,8 +11,8 @@ $app->register(new Silex\Provider\UrlGeneratorServiceProvider());
 
 $app['oauth'] = $app->share(function() use($app){
 	$oauth = new Atlassian\OAuthWrapper('https://example.atlassian.net/'); // replace your jira url
-	$oauth->setConsumerKey('xxxxxxxxxxxxxxxxxxxxx') // replace your jira consumer key
-	      ->setConsumerSecret(__DIR__ . '/jira.pem') // jira privet key
+	$oauth->setConsumerKey('1234567890') // replace your jira consumer key
+	      ->setConsumerSecret(__DIR__ . '/jira.pem') // privet key
 	      ->setRequestTokenUrl('plugins/servlet/oauth/request-token')
 	      ->setAuthorizationUrl('plugins/servlet/oauth/authorize?oauth_token=%s')
 	      ->setAccessTokenUrl('plugins/servlet/oauth/access-token')
